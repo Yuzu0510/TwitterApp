@@ -76,6 +76,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8A633D412B84FD34005E86C2 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				8ABCAEAE2B81D4790018D8F9 /* Main.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		8ABCAE9C2B81D4790018D8F9 = {
 			isa = PBXGroup;
 			children = (
@@ -99,10 +107,10 @@
 		8ABCAEA72B81D4790018D8F9 /* Twitter */ = {
 			isa = PBXGroup;
 			children = (
+				8A633D412B84FD34005E86C2 /* View */,
 				8ABCAEA82B81D4790018D8F9 /* AppDelegate.swift */,
 				8ABCAEAA2B81D4790018D8F9 /* SceneDelegate.swift */,
 				8ABCAEAC2B81D4790018D8F9 /* ViewController.swift */,
-				8ABCAEAE2B81D4790018D8F9 /* Main.storyboard */,
 				8ABCAEB12B81D47A0018D8F9 /* Assets.xcassets */,
 				8ABCAEB32B81D47A0018D8F9 /* LaunchScreen.storyboard */,
 				8ABCAEB62B81D47A0018D8F9 /* Info.plist */,
