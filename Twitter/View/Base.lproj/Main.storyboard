@@ -20,7 +20,7 @@
                                 <rect key="frame" x="0.0" y="59" width="393" height="759"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="blR-zK-WPu">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="list" id="blR-zK-WPu">
                                         <rect key="frame" x="0.0" y="50" width="393" height="44.666667938232422"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="blR-zK-WPu" id="DMe-w5-hdN">
@@ -45,7 +45,6 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="outputTableView" destination="blR-zK-WPu" id="mdj-hu-FBI"/>
                         <outlet property="tableView" destination="u83-uB-djI" id="pZ0-RV-S1I"/>
                     </connections>
                 </viewController>
