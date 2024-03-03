@@ -62,7 +62,7 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="tableView" destination="u83-uB-djI" id="pZ0-RV-S1I"/>
+                        <outlet property="tweetTableView" destination="u83-uB-djI" id="pZ0-RV-S1I"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
