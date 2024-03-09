@@ -6,24 +6,22 @@
 //
 
 import UIKit
-
 /// タイムライン画面
-class TimelineViewController: UIViewController, UITableViewDelegate {
-    
+class TimelineViewController: UIViewController {
     // Content of each tweet.
     var stringListData = ["ツイートA", "ツイートB", "ツイートC", "ツイートD","ツイートE", "ツイートF", "ツイートG", "ツイートH","ツイートI", "ツイートJ", "ツイートK", "ツイートL","ツイートM", "ツイートN", "ツイートO", "ツイートP","ツイートQ", "ツイートR", "ツイートS", "ツイートT","ツイートU", "ツイートV", "ツイートW", "ツイートX","ツイートY", "ツイートZ", "ツイートA", "ツイートB", "ツイートC", "ツイートD","ツイートE", "ツイートF", "ツイートG", "ツイートH","ツイートI", "ツイートJ", "ツイートK", "ツイートL","ツイートM", "ツイートN", "ツイートO", "ツイートP","ツイートQ", "ツイートR", "ツイートS", "ツイートT","ツイートU", "ツイートV", "ツイートW", "ツイートX","ツイートY", "ツイートZ", "ツイートA", "ツイートB", "ツイートC", "ツイートD","ツイートE", "ツイートF", "ツイートG", "ツイートH","ツイートI", "ツイートJ", "ツイートK", "ツイートL","ツイートM", "ツイートN", "ツイートO", "ツイートP","ツイートQ", "ツイートR", "ツイートS", "ツイートT","ツイートU", "ツイートV", "ツイートW", "ツイートX","ツイートY", "ツイートZ", "ツイートA", "ツイートB", "ツイートC", "ツイートD","ツイートE", "ツイートF", "ツイートG", "ツイートH","ツイートI", "ツイートJ", "ツイートK", "ツイートL","ツイートM", "ツイートN", "ツイートO", "ツイートP","ツイートQ", "ツイートR", "ツイートS", "ツイートT","ツイートU", "ツイートV", "ツイートW", "ツイートX","ツイートY", "ツイートZ", "ツイートA", "ツイートB", "ツイートC", "ツイートD","ツイートE", "ツイートF", "ツイートG", "ツイートH","ツイートI", "ツイートJ", "ツイートK", "ツイートL","ツイートM", "ツイートN", "ツイートO", "ツイートP","ツイートQ", "ツイートR", "ツイートS", "ツイートT","ツイートU", "ツイートV", "ツイートW", "ツイートX","ツイートY", "ツイートZ", "ツイートA", "ツイートB", "ツイートC", "ツイートD","ツイートE", "ツイートF", "ツイートG", "ツイートH","ツイートI", "ツイートJ", "ツイートK", "ツイートL","ツイートM", "ツイートN", "ツイートO", "ツイートP","ツイートQ", "ツイートR", "ツイートS", "ツイートT","ツイートU", "ツイートV", "ツイートW", "ツイートX","ツイートY", "ツイートZ", "ツイートA", "ツイートB", "ツイートC", "ツイートD","ツイートE", "ツイートF", "ツイートG", "ツイートH","ツイートI", "ツイートJ", "ツイートK", "ツイートL","ツイートM", "ツイートN", "ツイートO", "ツイートP","ツイートQ", "ツイートR", "ツイートS", "ツイートT","ツイートU", "ツイートV", "ツイートW", "ツイートX","ツイートY", "ツイートZ", "ツイートA", "ツイートB", "ツイートC", "ツイートD","ツイートE", "ツイートF", "ツイートG", "ツイートH","ツイートI", "ツイートJ", "ツイートK", "ツイートL","ツイートM", "ツイートN", "ツイートO", "ツイートP","ツイートQ", "ツイートR", "ツイートS", "ツイートT","ツイートU", "ツイートV", "ツイートW", "ツイートX","ツイートY", "ツイートZ"]
     
-    
     @IBOutlet weak var tweetTableView: UITableView!
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        tweetTableView.dataSource = self
+        configreTableView()
         tweetTableView.tableFooterView = UIView()
-        
+    }
+    
+    private func configreTableView() {
+        tweetTableView.dataSource = self
         // 下記のコードでUINibの登録をしている。
-        tweetTableView.delegate = self
         let nib = UINib(nibName: "TweetTableViewCell", bundle: nil)
         tweetTableView.register(nib, forCellReuseIdentifier: "Cell")
     }
@@ -38,8 +36,6 @@ extension TimelineViewController: UITableViewDataSource {
     // リストの中身を出力する
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        
-        //let cell: UITableViewCell = tableView.dequeueReusableCell(withIdentifier: "list", for: indexPath)
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)as! TweetTableViewCell
         
         cell.textLabel?.text = stringListData[indexPath.row]
@@ -47,4 +43,3 @@ extension TimelineViewController: UITableViewDataSource {
         return cell
     }
 }
-
