@@ -9,15 +9,14 @@ import UIKit
 
 class TweetTableViewCell: UITableViewCell {
     
-    @IBOutlet weak var UIImage: UIImageView!
+    @IBOutlet weak var userIconImageView: UIImageView!
     @IBOutlet weak var detailLabel: UILabel!
     @IBOutlet weak var nameLabel: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        
         // ユーザーアイコンの角丸処理(円形処理)
-        self.UIImage.layer.cornerRadius = 15
+        self.userIconImageView.layer.cornerRadius = 15
     }
     
     override func setSelected(_ selected: Bool, animated: Bool) {
