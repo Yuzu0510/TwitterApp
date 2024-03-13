@@ -40,3 +40,10 @@ extension TimelineViewController: UITableViewDataSource {
         return cell
     }
 }
+
+extension TimelineViewController: UITableViewDelegate {
+    /// セルの高さを設定するメソッド
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 150
+    }
+}
