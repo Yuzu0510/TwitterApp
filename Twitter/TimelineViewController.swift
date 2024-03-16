@@ -36,15 +36,15 @@ extension TimelineViewController: UITableViewDataSource {
     // リストの中身を出力する
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)as! TweetTableViewCell
+        
         //cell.textLabel?.text = stringListData[indexPath.row]
         return cell
     }
 }
 
 extension TimelineViewController: UITableViewDelegate {
-    /// セルの高さを設定するメソッド
+    /// セルの高さを設定するメソッド（可変）
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return UITableView.automaticDimension
-
     }
 }
