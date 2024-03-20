@@ -7,9 +7,10 @@
 
 import UIKit
 /// タイムライン画面
-class TimelineViewController: UIViewController, UITableViewDelegate {
+class TimelineViewController: UIViewController {
+    
     // Content of each tweet.
-    var stringListData = ["日本国民は、正当に選挙された国会における代表者を通じて行動し、われらとわれらの子孫のために、諸国民との協和による成果と、わが国全土にわたつて自由のもたらす恵沢を確保し、政府の行為によつて再び戦争の惨禍が起ることのないやうにすることを決意し、ここに主権が国民に存することを宣言し、この憲法を確定する。そもそも国政は、国民の厳粛な信託によるものであつて、その権威は国民に由来し、その権力は国民の代表者がこれを行使し、その福利は国民がこれを享受する。これは人類普遍の原理であり、この憲法は、かかる原理に基くものである。われらは、これに反する一切の憲法、法令及び詔勅を排除する", "ツイートB", "ツイートC", "ツイートD","ツイートE", "ツイートF", "ツイートG", "ツイートH","ツイートI", "ツイートJ", "ツイートK", "ツイートL","ツイートM", "ツイートN", "ツイートO", "ツイートP","ツイートQ", "ツイートR", "ツイートS", "ツイートT","ツイートU", "ツイートV", "ツイートW", "ツイートX","ツイートY", "ツイートZ", "ツイートA", "ツイートB", "ツイートC", "ツイートD","ツイートE", "ツイートF", "ツイートG", "ツイートH","ツイートI", "ツイートJ", "ツイートK", "ツイートL","ツイートM", "ツイートN", "ツイートO", "ツイートP","ツイートQ", "ツイートR", "ツイートS", "ツイートT","ツイートU", "ツイートV", "ツイートW", "ツイートX","ツイートY", "ツイートZ", "ツイートA", "ツイートB", "ツイートC", "ツイートD","ツイートE", "ツイートF", "ツイートG", "ツイートH","ツイートI", "ツイートJ", "ツイートK", "ツイートL","ツイートM", "ツイートN", "ツイートO", "ツイートP","ツイートQ", "ツイートR", "ツイートS", "ツイートT","ツイートU", "ツイートV", "ツイートW", "ツイートX","ツイートY", "ツイートZ", "ツイートA", "ツイートB", "ツイートC", "ツイートD","ツイートE", "ツイートF", "ツイートG", "ツイートH","ツイートI", "ツイートJ", "ツイートK", "ツイートL","ツイートM", "ツイートN", "ツイートO", "ツイートP","ツイートQ", "ツイートR", "ツイートS", "ツイートT","ツイートU", "ツイートV", "ツイートW", "ツイートX","ツイートY", "ツイートZ", "ツイートA", "ツイートB", "ツイートC", "ツイートD","ツイートE", "ツイートF", "ツイートG", "ツイートH","ツイートI", "ツイートJ", "ツイートK", "ツイートL","ツイートM", "ツイートN", "ツイートO", "ツイートP","ツイートQ", "ツイートR", "ツイートS", "ツイートT","ツイートU", "ツイートV", "ツイートW", "ツイートX","ツイートY", "ツイートZ", "ツイートA", "ツイートB", "ツイートC", "ツイートD","ツイートE", "ツイートF", "ツイートG", "ツイートH","ツイートI", "ツイートJ", "ツイートK", "ツイートL","ツイートM", "ツイートN", "ツイートO", "ツイートP","ツイートQ", "ツイートR", "ツイートS", "ツイートT","ツイートU", "ツイートV", "ツイートW", "ツイートX","ツイートY", "ツイートZ", "ツイートA", "ツイートB", "ツイートC", "ツイートD","ツイートE", "ツイートF", "ツイートG", "ツイートH","ツイートI", "ツイートJ", "ツイートK", "ツイートL","ツイートM", "ツイートN", "ツイートO", "ツイートP","ツイートQ", "ツイートR", "ツイートS", "ツイートT","ツイートU", "ツイートV", "ツイートW", "ツイートX","ツイートY", "ツイートZ", "ツイートA", "ツイートB", "ツイートC", "ツイートD","ツイートE", "ツイートF", "ツイートG", "ツイートH","ツイートI", "ツイートJ", "ツイートK", "ツイートL","ツイートM", "ツイートN", "ツイートO", "ツイートP","ツイートQ", "ツイートR", "ツイートS", "ツイートT","ツイートU", "ツイートV", "ツイートW", "ツイートX","ツイートY", "ツイートZ"]
+    var stringListData = ["日本国民は、正当に選挙された国会における代表者を通じて行動し、われらとわれらの子孫のために、諸国民との協和による成果と、わが国全土にわたつて自由のもたらす恵沢を確保し、政府の行為によつて再び戦争の惨禍が起ることのないやうにすることを決意し、ここに主権が国民に存することを宣言し、この憲法を確定する。そもそも国政は、国民の厳粛な信託によるものであつて、その権威は国民に由来し、その権力は国民の代表者がこれを行使し、その福利は国民がこれを享受する。これは人類普遍の原理であり、この憲法は、かかる原理に基くものである。われらは、これに反する一切の憲法、法令及び詔勅を排除する", "ツイートB", "ツイートC", "ツイートD","ツイートE", "ツイートF", "ツイートG", "ツイートH","ツイートI", "ツイートJ", "ツイートK"]
     
     @IBOutlet weak var tweetTableView: UITableView!
     
@@ -25,15 +26,10 @@ class TimelineViewController: UIViewController, UITableViewDelegate {
         // 下記のコードでUINibの登録をしている。
         let nib = UINib(nibName: "TweetTableViewCell", bundle: nil)
         tweetTableView.register(nib, forCellReuseIdentifier: "Cell")
-        
-        // セルの高さの推定値を設定するプロパティ（estimatedRowHeight）
-        tweetTableView.estimatedRowHeight = 66
-        // セルの高さを自動調整する
-        tweetTableView.rowHeight =  UITableView.automaticDimension
     }
 }
 
-extension TimelineViewController: UITableViewDataSource {
+extension TimelineViewController: UITableViewDataSource, UITableViewDelegate {
     // リストの数を指定する　passlistの配列の個数を指定
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return stringListData.count
@@ -48,5 +44,11 @@ extension TimelineViewController: UITableViewDataSource {
         cell.textLabel?.text = stringListData[indexPath.row]
         return cell
     }
+    
+    // セルの高さを設定するメソッド
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        // セルの高さの推定値を設定するプロパティ（estimatedRowHeight）
+        tableView.estimatedRowHeight=400
+        return UITableView.automaticDimension
+    }
 }
-
