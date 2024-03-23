@@ -60,6 +60,9 @@
                                 <buttonConfiguration key="configuration" style="plain" title="＋">
                                     <fontDescription key="titleFontDescription" name="HiraginoSans-W5" family="Hiragino Sans" pointSize="25"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <action selector="didTapTweetButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="5xB-JA-yNy"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -77,7 +80,7 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="tweetButton" destination="7uo-ef-7vu" id="eZK-5T-PbV"/>
+                        <outlet property="tweetButton" destination="7uo-ef-7vu" id="VYn-IQ-Vkz"/>
                         <outlet property="tweetTableView" destination="u83-uB-djI" id="pZ0-RV-S1I"/>
                     </connections>
                 </viewController>
