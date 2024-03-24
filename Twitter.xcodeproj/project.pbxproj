@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8A21399E2BAFE10300451CB4 /* TweetEditViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A21399C2BAFE10300451CB4 /* TweetEditViewController.swift */; };
+		8A21399F2BAFE10300451CB4 /* TweetEditViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8A21399D2BAFE10300451CB4 /* TweetEditViewController.xib */; };
 		8A5FA6762B90C888005A2FCD /* TweetTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A5FA6742B90C888005A2FCD /* TweetTableViewCell.swift */; };
 		8A5FA6772B90C888005A2FCD /* TweetTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8A5FA6752B90C888005A2FCD /* TweetTableViewCell.xib */; };
 		8ABC53612B98BDED00C2C192 /* TweetCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8ABC535F2B98BDED00C2C192 /* TweetCollectionViewCell.xib */; };
@@ -39,6 +41,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		8A21399C2BAFE10300451CB4 /* TweetEditViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TweetEditViewController.swift; sourceTree = "<group>"; };
+		8A21399D2BAFE10300451CB4 /* TweetEditViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TweetEditViewController.xib; sourceTree = "<group>"; };
 		8A5FA6742B90C888005A2FCD /* TweetTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TweetTableViewCell.swift; sourceTree = "<group>"; };
 		8A5FA6752B90C888005A2FCD /* TweetTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TweetTableViewCell.xib; sourceTree = "<group>"; };
 		8ABC535F2B98BDED00C2C192 /* TweetCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TweetCollectionViewCell.xib; sourceTree = "<group>"; };
@@ -87,7 +91,9 @@
 			children = (
 				8ABCAEAE2B81D4790018D8F9 /* Main.storyboard */,
 				8A5FA6752B90C888005A2FCD /* TweetTableViewCell.xib */,
+				8A21399D2BAFE10300451CB4 /* TweetEditViewController.xib */,
 				8ABCAEB32B81D47A0018D8F9 /* LaunchScreen.storyboard */,
+				8ABC535F2B98BDED00C2C192 /* TweetCollectionViewCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -118,11 +124,11 @@
 				8A633D412B84FD34005E86C2 /* View */,
 				8ABCAEAC2B81D4790018D8F9 /* TimelineViewController.swift */,
 				8A5FA6742B90C888005A2FCD /* TweetTableViewCell.swift */,
+				8A21399C2BAFE10300451CB4 /* TweetEditViewController.swift */,
 				8ABCAEA82B81D4790018D8F9 /* AppDelegate.swift */,
 				8ABCAEAA2B81D4790018D8F9 /* SceneDelegate.swift */,
 				8ABCAEB12B81D47A0018D8F9 /* Assets.xcassets */,
 				8ABCAEB62B81D47A0018D8F9 /* Info.plist */,
-				8ABC535F2B98BDED00C2C192 /* TweetCollectionViewCell.xib */,
 			);
 			path = Twitter;
 			sourceTree = "<group>";
@@ -252,6 +258,7 @@
 				8ABCAEB22B81D47A0018D8F9 /* Assets.xcassets in Resources */,
 				8ABC53612B98BDED00C2C192 /* TweetCollectionViewCell.xib in Resources */,
 				8ABCAEB02B81D4790018D8F9 /* Main.storyboard in Resources */,
+				8A21399F2BAFE10300451CB4 /* TweetEditViewController.xib in Resources */,
 				8A5FA6772B90C888005A2FCD /* TweetTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -281,6 +288,7 @@
 				8ABCAEA92B81D4790018D8F9 /* AppDelegate.swift in Sources */,
 				8ABCAEAB2B81D4790018D8F9 /* SceneDelegate.swift in Sources */,
 				8A5FA6762B90C888005A2FCD /* TweetTableViewCell.swift in Sources */,
+				8A21399E2BAFE10300451CB4 /* TweetEditViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
