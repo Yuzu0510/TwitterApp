@@ -23,13 +23,14 @@ class TimelineViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         configreTableView()
+        tweetTableView.tableFooterView = UIView()
     }
     
     // MARK: - IBActions
     
     /// ツイートボタン タップイベント
     @IBAction func didTapTweetButton(_ sender: Any) {
-        //TODO: ツイートボタンを押したときの動作を記述する。
+        //TODO: ツイートボタンを押したときの動作をここに記述する。
     }
     
     private func configreTableView() {
