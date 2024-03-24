@@ -23,7 +23,6 @@ class TimelineViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         configreTableView()
-        tweetTableView.tableFooterView = UIView()
     }
     
     // MARK: - IBActions
