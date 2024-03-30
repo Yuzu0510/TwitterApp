@@ -29,6 +29,6 @@ class TweetEditViewController: UIViewController {
     
     /// キャンセルボタン タップイベント
     @IBAction func didTapCloseButton(_ sender: Any) {
-        navigationController?.popViewController(animated: true)
+        dismiss(animated: true,completion: nil)
     }
 }
