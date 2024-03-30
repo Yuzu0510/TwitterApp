@@ -29,7 +29,11 @@ class TimelineViewController: UIViewController {
     
     /// ツイートボタン タップイベント
     @IBAction func didTapTweetButton(_ sender: Any) {
-        //TODO: ツイートボタンを押したときの動作をここに記述する。
+        // ツイート編集画面へ画面遷移する。
+        let nextVC = TweetEditViewController()
+        navigationController?.pushViewController(nextVC, animated: true)
+        
+        nextVC.hidesBottomBarWhenPushed = false
     }
     
     private func configreTableView() {
