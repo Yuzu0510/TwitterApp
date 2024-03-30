@@ -40,8 +40,6 @@ class TimelineViewController: UIViewController {
         // 下記のコードでUINibの登録をしている。
         let nib = UINib(nibName: "TweetTableViewCell", bundle: nil)
         tweetTableView.register(nib, forCellReuseIdentifier: "Cell")
-        // Navigation Barを非表示にする。
-        self.navigationController?.isNavigationBarHidden = true
     }
 }
 
