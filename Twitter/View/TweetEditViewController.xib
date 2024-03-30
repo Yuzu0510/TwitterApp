@@ -52,16 +52,23 @@
                         <constraint firstAttribute="height" constant="30" id="1fe-4j-QqV"/>
                         <constraint firstAttribute="width" constant="30" id="Klg-Xw-921"/>
                     </constraints>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                            <integer key="value" value="15"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
                 </imageView>
-                <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9pi-Ri-q5d">
-                    <rect key="frame" x="110" y="131.33333333333334" width="32" height="34"/>
+                <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Admin" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9pi-Ri-q5d">
+                    <rect key="frame" x="90" y="139" width="70" height="19"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="70" id="Y8B-BS-Kvo"/>
+                    </constraints>
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                     <textInputTraits key="textInputTraits"/>
                 </textField>
-                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="xlT-yE-TYM">
-                    <rect key="frame" x="40" y="210.33333333333331" width="313" height="557.66666666666674"/>
+                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="いまどうしてる？" translatesAutoresizingMaskIntoConstraints="NO" id="xlT-yE-TYM">
+                    <rect key="frame" x="40" y="203" width="313" height="565"/>
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                    <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                     <color key="textColor" systemColor="labelColor"/>
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                     <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
@@ -80,7 +87,7 @@
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="xlT-yE-TYM" secondAttribute="bottom" constant="50" id="mjk-EO-Qxl"/>
                 <constraint firstItem="9pi-Ri-q5d" firstAttribute="centerY" secondItem="DGx-Hc-Qg5" secondAttribute="centerY" id="uT7-6b-2ks"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="jmD-sw-c3g" secondAttribute="trailing" constant="20" id="upR-3u-WDh"/>
-                <constraint firstItem="9pi-Ri-q5d" firstAttribute="leading" secondItem="DGx-Hc-Qg5" secondAttribute="trailing" constant="40" id="x0R-5v-w46"/>
+                <constraint firstItem="9pi-Ri-q5d" firstAttribute="leading" secondItem="DGx-Hc-Qg5" secondAttribute="trailing" constant="20" id="x0R-5v-w46"/>
                 <constraint firstItem="ZkF-HH-hAt" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="zuX-yp-rS8"/>
             </constraints>
             <point key="canvasLocation" x="87" y="21"/>
