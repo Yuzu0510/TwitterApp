@@ -6,6 +6,7 @@
 //
 
 import UIKit
+
 /// タイムライン画面
 class TimelineViewController: UIViewController {
     
@@ -29,8 +30,13 @@ class TimelineViewController: UIViewController {
     
     /// ツイートボタン タップイベント
     @IBAction func didTapTweetButton(_ sender: Any) {
-        //TODO: ツイートボタンを押したときの動作をここに記述する。
+        // ツイート編集画面へ遷移する。
+        let nextVC = TweetEditViewController()
+        nextVC.modalPresentationStyle = .fullScreen
+        present(nextVC, animated: true)
     }
+    
+    // MARK: Other Methods
     
     private func configreTableView() {
         tweetTableView.dataSource = self
