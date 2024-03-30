@@ -91,9 +91,8 @@
 			children = (
 				8ABCAEAE2B81D4790018D8F9 /* Main.storyboard */,
 				8A5FA6752B90C888005A2FCD /* TweetTableViewCell.xib */,
-				8ABCAEB32B81D47A0018D8F9 /* LaunchScreen.storyboard */,
-				8AF031DA2BB7CAFE00A28A6C /* TweetEditViewController.swift */,
 				8AF031DB2BB7CAFE00A28A6C /* TweetEditViewController.xib */,
+				8ABCAEB32B81D47A0018D8F9 /* LaunchScreen.storyboard */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -123,6 +122,7 @@
 			children = (
 				8A633D412B84FD34005E86C2 /* View */,
 				8ABCAEAC2B81D4790018D8F9 /* TimelineViewController.swift */,
+				8AF031DA2BB7CAFE00A28A6C /* TweetEditViewController.swift */,
 				8A5FA6742B90C888005A2FCD /* TweetTableViewCell.swift */,
 				8ABCAEA82B81D4790018D8F9 /* AppDelegate.swift */,
 				8ABCAEAA2B81D4790018D8F9 /* SceneDelegate.swift */,

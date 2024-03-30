@@ -29,7 +29,9 @@ class TimelineViewController: UIViewController {
     
     /// ツイートボタン タップイベント
     @IBAction func didTapTweetButton(_ sender: Any) {
-        //TODO: ツイートボタンを押したときの動作をここに記述する。
+        // ツイート編集画面へ遷移する。
+        let nextVC = TweetEditViewController()
+        navigationController?.pushViewController(nextVC, animated: true)
     }
     
     private func configreTableView() {
@@ -38,6 +40,8 @@ class TimelineViewController: UIViewController {
         // 下記のコードでUINibの登録をしている。
         let nib = UINib(nibName: "TweetTableViewCell", bundle: nil)
         tweetTableView.register(nib, forCellReuseIdentifier: "Cell")
+        // Navigation Barを非表示にする。
+        self.navigationController?.isNavigationBarHidden = true
     }
 }
 
