@@ -31,7 +31,8 @@ class TimelineViewController: UIViewController {
     @IBAction func didTapTweetButton(_ sender: Any) {
         // ツイート編集画面へ遷移する。
         let nextVC = TweetEditViewController()
-        navigationController?.pushViewController(nextVC, animated: true)
+        nextVC.modalPresentationStyle = .fullScreen
+        present(nextVC, animated: true)
     }
     
     private func configreTableView() {
