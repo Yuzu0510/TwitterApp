@@ -74,7 +74,6 @@
                             <constraint firstItem="jHb-6z-pKM" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="wSh-y6-Gdl"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="Mxw-zG-ajg"/>
                     <connections>
                         <outlet property="tweetTableView" destination="u83-uB-djI" id="pZ0-RV-S1I"/>
                     </connections>
