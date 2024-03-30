@@ -7,7 +7,10 @@
 
 import UIKit
 /// ツイート編集画面
-class TweetEditViewController: UIViewController {
+class TweetEditViewController: UIViewController, UITextViewDelegate {
+    
+    // Properties
+    private let placeholderText = "いまどうしてる？"
     
     // MARK: - IBOutlets
     
@@ -19,6 +22,9 @@ class TweetEditViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        // プレースホルダー用の関数を呼び出し
+        configureTextView()
     }
     
     // MARK: - IBActions
@@ -30,5 +36,33 @@ class TweetEditViewController: UIViewController {
     /// キャンセルボタン タップイベント
     @IBAction func didTapCloseButton(_ sender: Any) {
         dismiss(animated: true,completion: nil)
+    }
+    
+    // MARK: - Other Methods
+    
+    /// プレースホルダーの設定をしている
+    private func configureTextView() {
+        postContentTextView.text = placeholderText
+        //プレースホルダーテキストの色を設定
+        postContentTextView.textColor = UIColor.lightGray
+        
+        // delegateを設定
+        postContentTextView.delegate = self
+    }
+    
+    /// テキストが編集されたときに呼ばれる
+    func textViewDidBeginEditing(_ textView: UITextView) {
+        if textView.text == placeholderText && textView.textColor == UIColor.lightGray {
+            textView.text = nil
+            textView.textColor = UIColor.black
+        }
+    }
+    
+    /// テキストフィールドがフォーカスを失ったときに呼ばれる
+    func textViewDidEndEditing(_ textView: UITextView) {
+        if textView.text.isEmpty {
+            textView.text = placeholderText
+            textView.textColor = UIColor.lightGray
+        }
     }
 }
