@@ -8,7 +8,7 @@
 import UIKit
 
 /// アイコン編集画面
-class IconEditViewController: UIViewController {
+class IconEditViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     
     // MARK: - IBOutlets
     
@@ -25,5 +25,81 @@ class IconEditViewController: UIViewController {
     
     /// 写真選択ボタン タップイベント
     @IBAction func didTapPhotoSelectButton(_ sender: Any) {
+        
+        // カメラを起動
+        let alert: UIAlertController = UIAlertController(title: "プロフィールを設定", message: "どちらか選択してください。", preferredStyle:  UIAlertController.Style.actionSheet)
+        
+        // カメラを起動するアラート
+        let cameraAction: UIAlertAction = UIAlertAction(title: "カメラを起動", style: UIAlertAction.Style.default, handler:{
+            (action: UIAlertAction!) -> Void in
+            
+            let picker = UIImagePickerController()
+            picker.sourceType = .camera
+            picker.delegate = self
+            // UIImagePickerController カメラを起動する
+            self.present(picker, animated: true, completion: nil)
+            
+            print("カメラを起動")
+        })
+        
+        // フォトライブラリを起動するコード
+        let photoAction: UIAlertAction = UIAlertAction(title: "フォトライブラリを起動", style: UIAlertAction.Style.default, handler:{
+            (action: UIAlertAction!) -> Void in
+            
+            let picker = UIImagePickerController()
+            self.present(picker, animated: true)
+            
+            // 画像選択時のデリゲートを設定
+            picker.delegate = self
+            print("フォトライブラリを起動")
+        })
+        
+        // Cancelボタン
+        let cancelAction: UIAlertAction = UIAlertAction(title: "cancel", style: UIAlertAction.Style.cancel, handler:{
+            (action: UIAlertAction!) -> Void in
+            print("cancelAction")
+        })
+        
+        // アクションを追加
+        alert.addAction(cameraAction)
+        alert.addAction(photoAction)
+        
+        // アラートを表示
+        present(alert, animated: true, completion: nil)
+    }
+    /// 閉じるボタン タップイベント
+    @IBAction func didTapExitButton(_ sender: Any) {
+        
+        // ツイート編集画面へ遷移する。
+        dismiss(animated: true, completion: nil)
+    }
+}
+
+
+extension IconEditViewController {
+    
+    // カメラ呼び出し後の処理
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+        let image = info[.originalImage] as! UIImage
+        // imageViewに画像を表示
+        userIconImageEditView.image = image
+        // UIImagePickerController カメラが閉じる
+        self.dismiss(animated: true, completion: nil)
+    }
+    
+    // フォトライブラリ起動後の処理
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]){
+        // 画像選択時の処理
+        // ↓選んだ画像を取得
+        let images = info[UIImagePickerController.InfoKey.originalImage.rawValue] as? UIImage
+        
+        // カメラロールを閉じる
+        picker.dismiss(animated: true, completion: nil)
+    }
+    
+    func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
+        // キャンセルボタンを押下時の処理
+        // カメラロールを閉じる
+        picker.dismiss(animated: true, completion: nil)
     }
 }

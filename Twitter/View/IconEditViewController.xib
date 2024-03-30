@@ -21,13 +21,13 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="アイコン画像編集" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eTN-E8-kmN">
-                    <rect key="frame" x="75.333333333333329" y="237" width="224.66666666666669" height="36"/>
+                    <rect key="frame" x="75.333333333333329" y="89" width="224.66666666666669" height="36"/>
                     <fontDescription key="fontDescription" type="system" pointSize="30"/>
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="person" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="NsC-6D-pld">
-                    <rect key="frame" x="112.66666666666669" y="350.33333333333331" width="150" height="147.33333333333331"/>
+                    <rect key="frame" x="112.66666666666669" y="156.33333333333331" width="150" height="147.33333333333331"/>
                     <color key="tintColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="150" id="FTM-QY-7ho"/>
@@ -35,30 +35,48 @@
                     </constraints>
                 </imageView>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0Cw-Pg-9tC">
-                    <rect key="frame" x="156" y="423" width="63" height="62"/>
-                    <color key="tintColor" systemColor="systemPinkColor"/>
+                    <rect key="frame" x="128.66666666666666" y="345" width="118" height="38"/>
+                    <color key="backgroundColor" systemColor="systemGray6Color"/>
+                    <color key="tintColor" red="0.41953834620000002" green="0.93777173629999999" blue="0.90330132929999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                     <state key="normal" title="Button"/>
-                    <buttonConfiguration key="configuration" style="plain" title="写真選択">
-                        <fontDescription key="titleFontDescription" type="boldSystem" pointSize="20"/>
+                    <buttonConfiguration key="configuration" style="plain" title="写真を選ぶ">
+                        <fontDescription key="titleFontDescription" type="system" weight="medium" pointSize="20"/>
+                        <color key="baseForegroundColor" systemColor="systemTealColor"/>
                     </buttonConfiguration>
                     <connections>
                         <action selector="didTapPhotoSelectButton:" destination="-1" eventType="touchUpInside" id="gVq-TK-HnA"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nxR-Xf-YDI">
+                    <rect key="frame" x="110" y="443" width="155" height="38"/>
+                    <color key="backgroundColor" systemColor="systemGray6Color"/>
+                    <color key="tintColor" systemColor="systemPinkColor"/>
+                    <state key="normal" title="Button"/>
+                    <buttonConfiguration key="configuration" style="plain" title="決定して閉じる">
+                        <fontDescription key="titleFontDescription" type="system" weight="medium" pointSize="20"/>
+                        <color key="baseForegroundColor" systemColor="systemRedColor"/>
+                    </buttonConfiguration>
+                    <connections>
+                        <action selector="didTapExitButton:" destination="-1" eventType="touchUpInside" id="gh4-Hp-ufN"/>
+                        <action selector="didTapPhotoSelectButton:" destination="-1" eventType="touchUpInside" id="xjM-4M-fpI"/>
                     </connections>
                 </button>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
-                <constraint firstItem="0Cw-Pg-9tC" firstAttribute="top" secondItem="eTN-E8-kmN" secondAttribute="bottom" constant="150" id="3H5-9i-o7w"/>
+                <constraint firstItem="NsC-6D-pld" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="7Rc-hd-ISu"/>
+                <constraint firstItem="nxR-Xf-YDI" firstAttribute="top" secondItem="0Cw-Pg-9tC" secondAttribute="bottom" constant="60" id="AsA-0h-5kd"/>
                 <constraint firstItem="NsC-6D-pld" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="BPe-xF-8Y9"/>
-                <constraint firstItem="NsC-6D-pld" firstAttribute="top" secondItem="eTN-E8-kmN" secondAttribute="bottom" constant="76" id="O8d-il-13y"/>
-                <constraint firstItem="0Cw-Pg-9tC" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="156" id="Th7-bO-x77"/>
+                <constraint firstItem="NsC-6D-pld" firstAttribute="top" secondItem="eTN-E8-kmN" secondAttribute="bottom" constant="30" id="O8d-il-13y"/>
+                <constraint firstItem="nxR-Xf-YDI" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="WsK-u1-ay5"/>
+                <constraint firstItem="0Cw-Pg-9tC" firstAttribute="top" secondItem="NsC-6D-pld" secondAttribute="bottom" constant="40" id="dRQ-8j-b5a"/>
                 <constraint firstItem="eTN-E8-kmN" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="eZg-L0-b2d"/>
                 <constraint firstItem="NsC-6D-pld" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="mjc-2z-myB"/>
-                <constraint firstItem="eTN-E8-kmN" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="178" id="pWT-Ns-MQ1"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="0Cw-Pg-9tC" secondAttribute="trailing" constant="156" id="uf7-D1-dVp"/>
+                <constraint firstItem="eTN-E8-kmN" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="30" id="pWT-Ns-MQ1"/>
+                <constraint firstItem="0Cw-Pg-9tC" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="wCL-me-3O8"/>
             </constraints>
-            <point key="canvasLocation" x="6" y="21"/>
+            <point key="canvasLocation" x="5.343511450381679" y="20.422535211267608"/>
         </view>
     </objects>
     <resources>
@@ -66,8 +84,17 @@
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
+        <systemColor name="systemGray6Color">
+            <color red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
         <systemColor name="systemPinkColor">
             <color red="1" green="0.1764705882" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemRedColor">
+            <color red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemTealColor">
+            <color red="0.18823529410000001" green="0.69019607839999997" blue="0.78039215689999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
