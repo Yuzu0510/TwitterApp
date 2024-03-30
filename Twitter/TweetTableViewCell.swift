@@ -9,9 +9,13 @@ import UIKit
 
 class TweetTableViewCell: UITableViewCell {
     
+    // MARK: - IBOutlets
+    
     @IBOutlet weak var userIconImageView: UIImageView!
     @IBOutlet weak var detailLabel: UILabel!
     @IBOutlet weak var nameLabel: UILabel!
+    
+    // MARK: - View Life-Cycle Methods
     
     override func awakeFromNib() {
         super.awakeFromNib()
