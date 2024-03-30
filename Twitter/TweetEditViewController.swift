@@ -8,7 +8,7 @@
 import UIKit
 
 /// ツイート編集画面
-class TweetEditViewController: UIViewController, UITextViewDelegate {
+class TweetEditViewController: UIViewController {
     
     // Properties
     private let placeholderText = "いまどうしてる？"
@@ -50,7 +50,11 @@ class TweetEditViewController: UIViewController, UITextViewDelegate {
         // delegateを設定
         postContentTextView.delegate = self
     }
-    
+}
+
+// MARK: - UITextViewDelegate
+
+extension TweetEditViewController: UITextViewDelegate {
     /// テキストが編集されたときに呼ばれる
     func textViewDidBeginEditing(_ textView: UITextView) {
         if textView.text == placeholderText && textView.textColor == UIColor.lightGray {
