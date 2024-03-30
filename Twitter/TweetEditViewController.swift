@@ -24,7 +24,7 @@ class TweetEditViewController: UIViewController {
     // MARK: - IBActions
     
     ///　ポストボタン タップイベント
-    @IBAction func postButtonTapped(_ sender: Any) {
+    @IBAction func didTapPostButton(_ sender: Any) {
     }
     
     /// キャンセルボタン タップイベント
