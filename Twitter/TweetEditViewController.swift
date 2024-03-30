@@ -39,6 +39,12 @@ class TweetEditViewController: UIViewController {
         dismiss(animated: true,completion: nil)
     }
     
+    /// 編集ボタン タップイベント
+    @IBAction func didTapIconEditButton(_ sender: Any) {
+        let nextVC = IconEditViewController()
+        present(nextVC, animated: true)
+    }
+    
     // MARK: - Other Methods
     
     /// プレースホルダーの設定をしている
