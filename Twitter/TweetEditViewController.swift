@@ -15,7 +15,7 @@ class TweetEditViewController: UIViewController, UITextViewDelegate {
     
     // MARK: - IBOutlets
     
-    @IBOutlet weak var nameLabel: UITextField!
+    @IBOutlet weak var nameTextField: UITextField!
     @IBOutlet weak var userIconImageView: UIImageView!
     @IBOutlet weak var postContentTextView: UITextView!
     

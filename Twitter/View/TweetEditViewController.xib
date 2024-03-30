@@ -11,7 +11,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="TweetEditViewController" customModule="Twitter" customModuleProvider="target">
             <connections>
-                <outlet property="nameLabel" destination="9pi-Ri-q5d" id="OFI-6a-B99"/>
+                <outlet property="nameTextField" destination="9pi-Ri-q5d" id="OFI-6a-B99"/>
                 <outlet property="postContentTextView" destination="xlT-yE-TYM" id="9a9-5o-Jkq"/>
                 <outlet property="userIconImageView" destination="DGx-Hc-Qg5" id="5jp-NR-vB6"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
