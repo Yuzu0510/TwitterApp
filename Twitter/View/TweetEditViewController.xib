@@ -28,7 +28,7 @@
                     <state key="normal" title="Button"/>
                     <buttonConfiguration key="configuration" style="plain" title="キャンセル"/>
                     <connections>
-                        <action selector="closeButtonTapped:" destination="-1" eventType="touchUpInside" id="4dP-tr-wxi"/>
+                        <action selector="didTapCloseButton:" destination="-1" eventType="touchUpInside" id="4dP-tr-wxi"/>
                     </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jmD-sw-c3g">
