@@ -35,6 +35,8 @@ class TimelineViewController: UIViewController {
         present(nextVC, animated: true)
     }
     
+    // MARK: Other Methods
+    
     private func configreTableView() {
         tweetTableView.dataSource = self
         tweetTableView.delegate = self
