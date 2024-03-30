@@ -11,9 +11,9 @@ class TweetEditViewController: UIViewController {
     
     // MARK: - IBOutlets
     
+    @IBOutlet weak var nameLabel: UITextField!
     @IBOutlet weak var userIconImageView: UIImageView!
-    @IBOutlet weak var nameLabel: UILabel!
-    @IBOutlet weak var postContentTextField: UITextField!
+    @IBOutlet weak var postContentTextView: UITextView!
     
     // MARK: - View Life-Cycle Methods
     
