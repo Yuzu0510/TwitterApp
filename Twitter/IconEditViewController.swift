@@ -7,15 +7,13 @@
 
 import UIKit
 
-/// Protocol
 protocol IconEditViewControllerDelegate: AnyObject {
-    func updateUI (userIconImageEditView: UIImage)
+    func update(userIconImageView: UIImage)
 }
 
 /// アイコン編集画面
 class IconEditViewController: UIViewController {
     
-    // Properties
     weak var delegate: IconEditViewControllerDelegate?
     
     // MARK: - IBOutlets
@@ -72,8 +70,6 @@ class IconEditViewController: UIViewController {
     
     /// 閉じるボタン タップイベント
     @IBAction func didTapExitButton(_ sender: Any) {
-        // TODO: 閉じるボタンを押した際に元画面のuserIconImageViewを更新したい。
-        delegate?.updateUI(userIconImageView: UIImage)
         // ツイート編集画面へ遷移する。
         dismiss(animated: true, completion: nil)
     }
@@ -81,21 +77,26 @@ class IconEditViewController: UIViewController {
 
 extension IconEditViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     
-    // カメラ呼び出し後の処理
+    // フォトライブラリ起動後の処理
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
         let image = info[.originalImage] as! UIImage
         // imageViewに画像を表示
         self.userIconImageEditView.image = image
+        delegate?.update(userIconImageView: image)
+        print("画像を出力１")
         // UIImagePickerController カメラが閉じる
         self.dismiss(animated: true, completion: nil)
     }
     
-    // フォトライブラリ起動後の処理
+    // カメラ呼び出し後の処理
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]){
         // 画像選択時の処理
         // ↓選んだ画像を取得
         let images = info[UIImagePickerController.InfoKey.originalImage.rawValue] as? UIImage
-        
+        // imageViewに画像を表示
+        self.userIconImageEditView.image = images
+        delegate?.update(userIconImageView: images!)
+        print("画像を出力２")
         // カメラロールを閉じる
         picker.dismiss(animated: true, completion: nil)
     }

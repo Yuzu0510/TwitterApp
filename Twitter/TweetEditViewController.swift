@@ -23,6 +23,7 @@ class TweetEditViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         // プレースホルダー用の関数を呼び出し
         configureTextView()
     }
@@ -76,13 +77,8 @@ extension TweetEditViewController: UITextViewDelegate {
     }
 }
 
-// MARK: - IconEditViewControllerDelegate
-
 extension TweetEditViewController: IconEditViewControllerDelegate {
-    func updateUI (userIconImageEditView: UIImage) {
-        
-        // TODO: 受け取った画像を更新したい
-        self.userIconImageView = userIconImageEditView
+    func update(userIconImageView: UIImage) {
+        self.userIconImageView.image = userIconImageView
     }
-    
 }
