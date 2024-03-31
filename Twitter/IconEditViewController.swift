@@ -54,12 +54,6 @@ class IconEditViewController: UIViewController, UIImagePickerControllerDelegate,
             print("フォトライブラリを起動")
         })
         
-        // Cancelボタン
-        let cancelAction: UIAlertAction = UIAlertAction(title: "cancel", style: UIAlertAction.Style.cancel, handler:{
-            (action: UIAlertAction!) -> Void in
-            print("cancelAction")
-        })
-        
         // アクションを追加
         alert.addAction(cameraAction)
         alert.addAction(photoAction)
@@ -69,7 +63,6 @@ class IconEditViewController: UIViewController, UIImagePickerControllerDelegate,
     }
     /// 閉じるボタン タップイベント
     @IBAction func didTapExitButton(_ sender: Any) {
-        
         // ツイート編集画面へ遷移する。
         dismiss(animated: true, completion: nil)
     }
@@ -82,7 +75,7 @@ extension IconEditViewController {
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
         let image = info[.originalImage] as! UIImage
         // imageViewに画像を表示
-        userIconImageEditView.image = image
+        self.userIconImageEditView.image = image
         // UIImagePickerController カメラが閉じる
         self.dismiss(animated: true, completion: nil)
     }
