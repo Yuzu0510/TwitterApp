@@ -61,6 +61,7 @@ class IconEditViewController: UIViewController {
         // アラートを表示
         present(alert, animated: true, completion: nil)
     }
+    
     /// 閉じるボタン タップイベント
     @IBAction func didTapExitButton(_ sender: Any) {
         // ツイート編集画面へ遷移する。
