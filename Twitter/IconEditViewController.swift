@@ -8,7 +8,7 @@
 import UIKit
 
 /// アイコン編集画面
-class IconEditViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+class IconEditViewController: UIViewController {
     
     // MARK: - IBOutlets
     
@@ -69,7 +69,7 @@ class IconEditViewController: UIViewController, UIImagePickerControllerDelegate,
 }
 
 
-extension IconEditViewController {
+extension IconEditViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     
     // カメラ呼び出し後の処理
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
