@@ -23,7 +23,6 @@ class TweetEditViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         // プレースホルダー用の関数を呼び出し
         configureTextView()
     }
@@ -52,7 +51,6 @@ class TweetEditViewController: UIViewController {
         postContentTextView.text = placeholderText
         //プレースホルダーテキストの色を設定
         postContentTextView.textColor = UIColor.lightGray
-        
         // delegateを設定
         postContentTextView.delegate = self
     }
@@ -76,4 +74,15 @@ extension TweetEditViewController: UITextViewDelegate {
             textView.textColor = UIColor.lightGray
         }
     }
+}
+
+// MARK: - IconEditViewControllerDelegate
+
+extension TweetEditViewController: IconEditViewControllerDelegate {
+    func updateUI (userIconImageEditView: UIImage) {
+        
+        // TODO: 受け取った画像を更新したい
+        self.userIconImageView = userIconImageEditView
+    }
+    
 }

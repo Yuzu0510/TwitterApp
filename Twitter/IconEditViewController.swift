@@ -7,8 +7,16 @@
 
 import UIKit
 
+/// Protocol
+protocol IconEditViewControllerDelegate: AnyObject {
+    func updateUI (userIconImageEditView: UIImage)
+}
+
 /// アイコン編集画面
 class IconEditViewController: UIViewController {
+    
+    // Properties
+    weak var delegate: IconEditViewControllerDelegate?
     
     // MARK: - IBOutlets
     
@@ -64,11 +72,12 @@ class IconEditViewController: UIViewController {
     
     /// 閉じるボタン タップイベント
     @IBAction func didTapExitButton(_ sender: Any) {
+        // TODO: 閉じるボタンを押した際に元画面のuserIconImageViewを更新したい。
+        delegate?.updateUI(userIconImageView: UIImage)
         // ツイート編集画面へ遷移する。
         dismiss(animated: true, completion: nil)
     }
 }
-
 
 extension IconEditViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     
