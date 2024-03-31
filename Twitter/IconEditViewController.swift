@@ -70,6 +70,9 @@ class IconEditViewController: UIViewController {
     
     /// 閉じるボタン タップイベント
     @IBAction func didTapExitButton(_ sender: Any) {
+            // imageViewに画像を表示
+        delegate?.update(userIconImageView: userIconImageEditView.image!)
+        print ("確認")
         // ツイート編集画面へ遷移する。
         dismiss(animated: true, completion: nil)
     }
@@ -82,8 +85,6 @@ extension IconEditViewController: UIImagePickerControllerDelegate, UINavigationC
         let image = info[.originalImage] as! UIImage
         // imageViewに画像を表示
         self.userIconImageEditView.image = image
-        delegate?.update(userIconImageView: image)
-        print("画像を出力１")
         // UIImagePickerController カメラが閉じる
         self.dismiss(animated: true, completion: nil)
     }
