@@ -32,7 +32,7 @@
                     </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jmD-sw-c3g">
-                    <rect key="frame" x="269" y="58.666666666666657" width="104" height="35"/>
+                    <rect key="frame" x="275" y="58.666666666666657" width="104" height="35"/>
                     <color key="backgroundColor" name="AccentColor"/>
                     <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                     <state key="normal" title="Button"/>
@@ -58,8 +58,8 @@
                         </userDefinedRuntimeAttribute>
                     </userDefinedRuntimeAttributes>
                 </imageView>
-                <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Admin" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9pi-Ri-q5d">
-                    <rect key="frame" x="100" y="121" width="70" height="30"/>
+                <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="名前を入力してください。" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9pi-Ri-q5d">
+                    <rect key="frame" x="100" y="120" width="269" height="32"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="70" id="Y8B-BS-Kvo"/>
                     </constraints>
@@ -67,7 +67,7 @@
                     <textInputTraits key="textInputTraits"/>
                 </textField>
                 <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xlT-yE-TYM">
-                    <rect key="frame" x="40" y="166" width="313" height="602"/>
+                    <rect key="frame" x="40" y="167" width="319" height="601"/>
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     <color key="textColor" systemColor="labelColor"/>
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -101,6 +101,7 @@
                 <constraint firstItem="jmD-sw-c3g" firstAttribute="centerY" secondItem="ZkF-HH-hAt" secondAttribute="centerY" id="BS1-5R-w0o"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="xlT-yE-TYM" secondAttribute="trailing" constant="40" id="CdJ-Kr-xHh"/>
                 <constraint firstItem="pvr-Eg-fS0" firstAttribute="top" secondItem="ZkF-HH-hAt" secondAttribute="bottom" constant="20" id="FSS-Ip-c2X"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="9pi-Ri-q5d" secondAttribute="trailing" constant="30" id="LrM-js-Bmd"/>
                 <constraint firstItem="DGx-Hc-Qg5" firstAttribute="top" secondItem="ZkF-HH-hAt" secondAttribute="bottom" constant="20" id="Qgk-Qq-eRn"/>
                 <constraint firstItem="9pi-Ri-q5d" firstAttribute="centerY" secondItem="pvr-Eg-fS0" secondAttribute="centerY" id="ZG6-CS-cMf"/>
                 <constraint firstItem="xlT-yE-TYM" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="40" id="hLG-xN-D9j"/>
