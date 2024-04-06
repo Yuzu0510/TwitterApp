@@ -42,6 +42,9 @@ class TweetEditViewController: UIViewController {
     /// 編集ボタン タップイベント
     @IBAction func didTapIconEditButton(_ sender: Any) {
         let nextVC = IconEditViewController()
+        
+        // delegateは、次の画面へ移動したときに用いたボタンの中に記述する。
+        nextVC.delegate = self
         present(nextVC, animated: true)
     }
     
@@ -79,6 +82,7 @@ extension TweetEditViewController: UITextViewDelegate {
 
 extension TweetEditViewController: IconEditViewControllerDelegate {
     func update(userIconImageView: UIImage) {
+        // IconEditViewControllerから受け取った画像を、TweetEditViewControllerへ渡す。
         self.userIconImageView.image = userIconImageView
     }
 }
