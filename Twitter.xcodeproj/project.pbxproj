@@ -9,8 +9,6 @@
 /* Begin PBXBuildFile section */
 		8A5FA6762B90C888005A2FCD /* TweetTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A5FA6742B90C888005A2FCD /* TweetTableViewCell.swift */; };
 		8A5FA6772B90C888005A2FCD /* TweetTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8A5FA6752B90C888005A2FCD /* TweetTableViewCell.xib */; };
-		8AAB96492BB8012400845F95 /* IconEditViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8AAB96482BB8012400845F95 /* IconEditViewController.xib */; };
-		8AAB964A2BB8012400845F95 /* IconEditViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AAB96472BB8012400845F95 /* IconEditViewController.swift */; };
 		8ABCAEA92B81D4790018D8F9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ABCAEA82B81D4790018D8F9 /* AppDelegate.swift */; };
 		8ABCAEAB2B81D4790018D8F9 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ABCAEAA2B81D4790018D8F9 /* SceneDelegate.swift */; };
 		8ABCAEAD2B81D4790018D8F9 /* TimelineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ABCAEAC2B81D4790018D8F9 /* TimelineViewController.swift */; };
@@ -44,8 +42,6 @@
 /* Begin PBXFileReference section */
 		8A5FA6742B90C888005A2FCD /* TweetTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TweetTableViewCell.swift; sourceTree = "<group>"; };
 		8A5FA6752B90C888005A2FCD /* TweetTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TweetTableViewCell.xib; sourceTree = "<group>"; };
-		8AAB96472BB8012400845F95 /* IconEditViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IconEditViewController.swift; sourceTree = "<group>"; };
-		8AAB96482BB8012400845F95 /* IconEditViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = IconEditViewController.xib; sourceTree = "<group>"; };
 		8ABCAEA52B81D4790018D8F9 /* Twitter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Twitter.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8ABCAEA82B81D4790018D8F9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8ABCAEAA2B81D4790018D8F9 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -94,7 +90,6 @@
 				8ABCAEAE2B81D4790018D8F9 /* Main.storyboard */,
 				8A5FA6752B90C888005A2FCD /* TweetTableViewCell.xib */,
 				8AF031DB2BB7CAFE00A28A6C /* TweetEditViewController.xib */,
-				8AAB96482BB8012400845F95 /* IconEditViewController.xib */,
 				8ABCAEB32B81D47A0018D8F9 /* LaunchScreen.storyboard */,
 			);
 			path = View;
@@ -125,9 +120,8 @@
 			children = (
 				8A633D412B84FD34005E86C2 /* View */,
 				8ABCAEAC2B81D4790018D8F9 /* TimelineViewController.swift */,
-				8A5FA6742B90C888005A2FCD /* TweetTableViewCell.swift */,
 				8AF031DA2BB7CAFE00A28A6C /* TweetEditViewController.swift */,
-				8AAB96472BB8012400845F95 /* IconEditViewController.swift */,
+				8A5FA6742B90C888005A2FCD /* TweetTableViewCell.swift */,
 				8ABCAEA82B81D4790018D8F9 /* AppDelegate.swift */,
 				8ABCAEAA2B81D4790018D8F9 /* SceneDelegate.swift */,
 				8ABCAEB12B81D47A0018D8F9 /* Assets.xcassets */,
@@ -262,7 +256,6 @@
 				8ABCAEB02B81D4790018D8F9 /* Main.storyboard in Resources */,
 				8AF031DD2BB7CAFE00A28A6C /* TweetEditViewController.xib in Resources */,
 				8A5FA6772B90C888005A2FCD /* TweetTableViewCell.xib in Resources */,
-				8AAB96492BB8012400845F95 /* IconEditViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -292,7 +285,6 @@
 				8ABCAEAB2B81D4790018D8F9 /* SceneDelegate.swift in Sources */,
 				8A5FA6762B90C888005A2FCD /* TweetTableViewCell.swift in Sources */,
 				8AF031DC2BB7CAFE00A28A6C /* TweetEditViewController.swift in Sources */,
-				8AAB964A2BB8012400845F95 /* IconEditViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
