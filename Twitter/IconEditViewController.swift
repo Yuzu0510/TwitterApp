@@ -31,8 +31,22 @@ class IconEditViewController: UIViewController {
     
     /// 写真選択ボタン タップイベント
     @IBAction func didTapPhotoSelectButton(_ sender: Any) {
-        
-        // カメラを起動
+        setCamera()
+    }
+    
+    /// 閉じるボタン タップイベント
+    @IBAction func didTapExitButton(_ sender: Any) {
+        // imageViewに画像を表示
+        delegate?.update(userIconImageView: userIconImageEditView.image!)
+        print ("確認")
+        // ツイート編集画面へ遷移する。
+        dismiss(animated: true, completion: nil)
+    }
+    
+    //MARK: Other Methods
+    
+    /// カメラ、フォトライブラリ起動イベント
+    func setCamera() {
         let alert: UIAlertController = UIAlertController(title: "プロフィールを設定", message: "どちらか選択してください。", preferredStyle:  UIAlertController.Style.actionSheet)
         
         // カメラを起動するアラート
@@ -67,16 +81,9 @@ class IconEditViewController: UIViewController {
         // アラートを表示
         present(alert, animated: true, completion: nil)
     }
-    
-    /// 閉じるボタン タップイベント
-    @IBAction func didTapExitButton(_ sender: Any) {
-        // imageViewに画像を表示
-        delegate?.update(userIconImageView: userIconImageEditView.image!)
-        print ("確認")
-        // ツイート編集画面へ遷移する。
-        dismiss(animated: true, completion: nil)
-    }
 }
+
+// MARK: - UIImagePickerControllerDelegate, UINavigationControllerDelegate
 
 extension IconEditViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     
@@ -108,4 +115,3 @@ extension IconEditViewController: UIImagePickerControllerDelegate, UINavigationC
         picker.dismiss(animated: true, completion: nil)
     }
 }
-
