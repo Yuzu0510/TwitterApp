@@ -39,6 +39,15 @@ class TweetEditViewController: UIViewController {
         dismiss(animated: true,completion: nil)
     }
     
+    /// 編集ボタン タップイベント
+    @IBAction func didTapIconEditButton(_ sender: Any) {
+        let nextVC = IconEditViewController()
+        
+        // delegateは、次の画面へ移動したときに用いたボタンの中に記述する。
+        nextVC.delegate = self
+        present(nextVC, animated: true)
+    }
+    
     // MARK: - Other Methods
     
     /// プレースホルダーの設定をしている
@@ -46,7 +55,6 @@ class TweetEditViewController: UIViewController {
         postContentTextView.text = placeholderText
         //プレースホルダーテキストの色を設定
         postContentTextView.textColor = UIColor.lightGray
-        
         // delegateを設定
         postContentTextView.delegate = self
     }
@@ -69,5 +77,12 @@ extension TweetEditViewController: UITextViewDelegate {
             textView.text = placeholderText
             textView.textColor = UIColor.lightGray
         }
+    }
+}
+
+extension TweetEditViewController: IconEditViewControllerDelegate {
+    func update(userIconImageView: UIImage) {
+        // IconEditViewControllerから受け取った画像を、TweetEditViewControllerへ渡す。
+        self.userIconImageView.image = userIconImageView
     }
 }
