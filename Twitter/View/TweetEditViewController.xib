@@ -32,7 +32,7 @@
                     </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jmD-sw-c3g">
-                    <rect key="frame" x="275" y="58.666666666666657" width="104" height="35"/>
+                    <rect key="frame" x="269" y="58.666666666666657" width="104" height="35"/>
                     <color key="backgroundColor" name="AccentColor"/>
                     <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                     <state key="normal" title="Button"/>
@@ -59,7 +59,7 @@
                     </userDefinedRuntimeAttributes>
                 </imageView>
                 <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="名前を入力してください。" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9pi-Ri-q5d">
-                    <rect key="frame" x="100" y="120" width="269" height="32"/>
+                    <rect key="frame" x="100" y="120" width="263" height="32"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="70" id="Y8B-BS-Kvo"/>
                     </constraints>
@@ -67,7 +67,7 @@
                     <textInputTraits key="textInputTraits"/>
                 </textField>
                 <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xlT-yE-TYM">
-                    <rect key="frame" x="40" y="167" width="319" height="601"/>
+                    <rect key="frame" x="40" y="167" width="313" height="601"/>
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     <color key="textColor" systemColor="labelColor"/>
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -112,7 +112,7 @@
                 <constraint firstItem="9pi-Ri-q5d" firstAttribute="leading" secondItem="DGx-Hc-Qg5" secondAttribute="trailing" constant="20" id="x0R-5v-w46"/>
                 <constraint firstItem="ZkF-HH-hAt" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="zuX-yp-rS8"/>
             </constraints>
-            <point key="canvasLocation" x="87" y="21"/>
+            <point key="canvasLocation" x="303" y="75"/>
         </view>
     </objects>
     <resources>
