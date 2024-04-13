@@ -67,15 +67,16 @@ class TweetEditViewController: UIViewController {
         }
         
         func userIconUpdate() {
-            var tweetDataList: [tweetDataModel] = []
+            var stringListData: [tweetDataModel] = []
             do {
                 let realm = try Realm()
                 let result = realm.objects(tweetDataModel.self)
-                tweetDataList = Array(result) // ← 取得したもの（result）を配列に格納
+                stringListData = Array(result) // ← 取得したもの（result）を配列に格納
             } catch {
                 print("データの取得エラー: \(error)")
             }
         }
+        
         dismiss(animated: true,completion: nil)
     }
     
