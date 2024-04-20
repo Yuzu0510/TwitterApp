@@ -76,6 +76,16 @@ class TweetEditViewController: UIViewController {
             print(Realm.Configuration.defaultConfiguration.fileURL!)
         }
         
+        func userIconUpdate() {
+            var stringListData: [tweetDataModel] = []
+            do {
+                let realm = try Realm()
+                let result = realm.objects(tweetDataModel.self)
+                stringListData = Array(result) // ← 取得したもの（result）を配列に格納
+            } catch {
+                print("データの取得エラー: \(error)")
+            }
+        }
         delegate?.timeLineIconUpdate()
         dismiss(animated: true,completion: nil)
     }
