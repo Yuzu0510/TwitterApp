@@ -20,9 +20,9 @@ class tweetDataModel: Object {
     // 管理用 ID。プライマリーキー
     @Persisted var id: String = UUID().uuidString //データを一意に識別するための識別子
     // ツイート本文
-    @Persisted var tweetData = ""
+    @Persisted var tweetData: String = ""
     // ユーザー名
-    @Persisted var userName = ""
+    @Persisted var userName: String = ""
     // ユーザーアイコン
     @Persisted var image: Data
     
@@ -76,16 +76,6 @@ class TweetEditViewController: UIViewController {
             print(Realm.Configuration.defaultConfiguration.fileURL!)
         }
         
-        func userIconUpdate() {
-            var stringListData: [tweetDataModel] = []
-            do {
-                let realm = try Realm()
-                let result = realm.objects(tweetDataModel.self)
-                stringListData = Array(result) // ← 取得したもの（result）を配列に格納
-            } catch {
-                print("データの取得エラー: \(error)")
-            }
-        }
         delegate?.timeLineIconUpdate()
         dismiss(animated: true,completion: nil)
     }
