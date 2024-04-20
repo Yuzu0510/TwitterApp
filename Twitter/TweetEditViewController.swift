@@ -6,12 +6,37 @@
 //
 
 import UIKit
+import RealmSwift
+
+/// delegateのプロトコル
+protocol iconImageViewControllerDelegate: AnyObject {
+    func timeLineIconUpdate()
+}
+
+// データモデル
+class tweetDataModel: Object {
+    // 管理用 ID。プライマリーキー
+    @Persisted var id: String = UUID().uuidString //データを一意に識別するための識別子
+    // ツイート本文
+    @Persisted var tweetData: String = ""
+    // ユーザー名
+    @Persisted var userName: String = ""
+    // ユーザーアイコン
+    @Persisted var image: Data
+    
+}
 
 /// ツイート編集画面
 class TweetEditViewController: UIViewController {
     
+    /// デリゲートのプロパティ
+    weak var delegate: iconImageViewControllerDelegate?
+    
+    
     // Properties
     private let placeholderText = "いまどうしてる？"
+    
+    let realm = try! Realm()
     
     // MARK: - IBOutlets
     
@@ -32,6 +57,24 @@ class TweetEditViewController: UIViewController {
     
     ///　ポストボタン タップイベント
     @IBAction func didTapPostButton(_ sender: Any) {
+        
+        var dataModel = tweetDataModel()
+        // Realmを使って保持する
+        try! realm.write {
+            
+            // お気に入り動画を追加(Realm)
+            // 選択された動画の情報をそれぞれの項目に代入する
+            dataModel.tweetData = postContentTextView.text
+            dataModel.userName = nameTextField.text!
+            // RealmではUIImage型が扱えないので、pngData型に変更
+            dataModel.image = userIconImageView.image!.pngData()!
+            realm.add(dataModel)
+            // Realmデータベースファイルまでのパスを表示
+            print(Realm.Configuration.defaultConfiguration.fileURL!)
+        }
+        
+        delegate?.timeLineIconUpdate()
+        dismiss(animated: true,completion: nil)
     }
     
     /// キャンセルボタン タップイベント

@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import RealmSwift
 
 /// タイムライン画面
 class TimelineViewController: UIViewController {
@@ -47,14 +48,28 @@ class TimelineViewController: UIViewController {
 
 // MARK: - UITableViewDataSource, UITableViewDelegate
 
-extension TimelineViewController: UITableViewDataSource, UITableViewDelegate {
+extension TimelineViewController: UITableViewDataSource, UITableViewDelegate, iconImageViewControllerDelegate {
     /// リストの数を指定する。　passlistの配列の個数＝tableViewのリストの個数
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return stringListData.count
     }
     
+    func timeLineIconUpdate() {
+        var stringListData: [tweetDataModel] = []
+        do {
+            let realm = try Realm()
+            let result = realm.objects(tweetDataModel.self)
+            stringListData = Array(result) // ← 取得したもの（result）を配列に格納
+            print("データが渡ったよ")
+        } catch {
+            print("データの取得エラー: \(error)")
+        }
+        self.tableView.reloadData()
+    }
+    
     /// リストの中身を出力する。
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)as! TweetTableViewCell
         // stringListDataの中身を表示する（detailLabelを指定することで、TweetTableViewで定めたフォーマットと紐付く。）
         cell.detailLabel?.text = stringListData[indexPath.row]
