@@ -10,8 +10,8 @@ import RealmSwift
 
 
 /// delegateのプロトコル
-protocol TimelineViewControllerDelegate: AnyObject {
-    func userIconUpdata()
+protocol iconImageViewControllerDelegate: AnyObject {
+    func timeLineIconUpdate()
 }
 
 
@@ -25,13 +25,15 @@ class tweetDataModel: Object {
     @Persisted var userName = ""
     // ユーザーアイコン
     @Persisted var image: Data
+    
 }
 
 
 /// ツイート編集画面
 class TweetEditViewController: UIViewController {
     
-    
+    /// デリゲートのプロパティ
+    weak var delegate: iconImageViewControllerDelegate?
     
     
     // Properties
@@ -70,22 +72,11 @@ class TweetEditViewController: UIViewController {
             // RealmではUIImage型が扱えないので、pngData型に変更
             dataModel.image = userIconImageView.image!.pngData()!
             realm.add(dataModel)
-            
             // Realmデータベースファイルまでのパスを表示
             print(Realm.Configuration.defaultConfiguration.fileURL!)
         }
         
-        func userIconUpdate() {
-            var stringListData: [tweetDataModel] = []
-            do {
-                let realm = try Realm()
-                let result = realm.objects(tweetDataModel.self)
-                stringListData = Array(result) // ← 取得したもの（result）を配列に格納
-            } catch {
-                print("データの取得エラー: \(error)")
-            }
-        }
-        
+        delegate?.timeLineIconUpdate()
         dismiss(animated: true,completion: nil)
     }
     
