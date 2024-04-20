@@ -7,10 +7,7 @@
 
 import UIKit
 
-/// delegateのプロトコル
-protocol TimelineViewControllerDelegate: AnyObject {
-    func userIconUpdata()
-}
+
 
 /// タイムライン画面
 class TimelineViewController: UIViewController {

@@ -9,6 +9,12 @@ import UIKit
 import RealmSwift
 
 
+/// delegateのプロトコル
+protocol TimelineViewControllerDelegate: AnyObject {
+    func userIconUpdata()
+}
+
+
 // データモデル
 class tweetDataModel: Object {
     // 管理用 ID。プライマリーキー
@@ -24,6 +30,9 @@ class tweetDataModel: Object {
 
 /// ツイート編集画面
 class TweetEditViewController: UIViewController {
+    
+    
+    
     
     // Properties
     private let placeholderText = "いまどうしてる？"
