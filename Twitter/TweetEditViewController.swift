@@ -8,12 +8,10 @@
 import UIKit
 import RealmSwift
 
-
 /// delegateのプロトコル
 protocol iconImageViewControllerDelegate: AnyObject {
     func timeLineIconUpdate()
 }
-
 
 // データモデル
 class tweetDataModel: Object {
@@ -27,7 +25,6 @@ class tweetDataModel: Object {
     @Persisted var image: Data
     
 }
-
 
 /// ツイート編集画面
 class TweetEditViewController: UIViewController {
