@@ -64,7 +64,7 @@ extension TimelineViewController: UITableViewDataSource, UITableViewDelegate, ic
         } catch {
             print("データの取得エラー: \(error)")
         }
-        self.tableView.reloadData()
+        //self.tableView.reloadData()
     }
     
     /// リストの中身を出力する。
