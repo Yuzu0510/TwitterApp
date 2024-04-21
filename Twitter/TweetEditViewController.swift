@@ -35,7 +35,7 @@ class TweetEditViewController: UIViewController {
     
     // Properties
     private let placeholderText = "いまどうしてる？"
-    
+    var dataModel = tweetDataModel()
     let realm = try! Realm()
     
     // MARK: - IBOutlets
@@ -91,7 +91,6 @@ class TweetEditViewController: UIViewController {
     
     /// Realmを使った保存処理を行っている
     private func keepData() {
-        var dataModel = tweetDataModel()
         // Realmを使って保持する
         try! realm.write {
             
