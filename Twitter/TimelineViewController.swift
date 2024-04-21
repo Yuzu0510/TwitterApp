@@ -48,7 +48,7 @@ class TimelineViewController: UIViewController {
 
 // MARK: - UITableViewDataSource, UITableViewDelegate
 
-extension TimelineViewController: UITableViewDataSource, UITableViewDelegate, iconImageViewControllerDelegate {
+extension TimelineViewController: UITableViewDataSource, UITableViewDelegate, TweetEditViewControllerDelegate {
     /// リストの数を指定する。　passlistの配列の個数＝tableViewのリストの個数
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return stringListData.count

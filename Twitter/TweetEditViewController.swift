@@ -9,7 +9,7 @@ import UIKit
 import RealmSwift
 
 /// delegateのプロトコル
-protocol iconImageViewControllerDelegate: AnyObject {
+protocol TweetEditViewControllerDelegate: AnyObject {
     func timeLineIconUpdate()
 }
 
@@ -30,7 +30,7 @@ class tweetDataModel: Object {
 class TweetEditViewController: UIViewController {
     
     /// デリゲートのプロパティ
-    weak var delegate: iconImageViewControllerDelegate?
+    weak var delegate: TweetEditViewControllerDelegate?
     
     
     // Properties
