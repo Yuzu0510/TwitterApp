@@ -8,6 +8,8 @@
 import UIKit
 import RealmSwift
 
+var stringListData2: [tweetDataModel] = []
+
 /// タイムライン画面
 class TimelineViewController: UIViewController {
     
@@ -54,21 +56,12 @@ extension TimelineViewController: UITableViewDataSource, UITableViewDelegate, Tw
         return stringListData.count
     }
     
-    func timeLineIconUpdate() {
-        var stringListData: [tweetDataModel] = []
-        do {
-            let realm = try Realm()
-            let result = realm.objects(tweetDataModel.self)
-            stringListData = Array(result) // ← 取得したもの（result）を配列に格納
-            print("データが渡ったよ")
-        } catch {
-            print("データの取得エラー: \(error)")
-        }
-        //self.tableView.reloadData()
-    }
+
     
     /// リストの中身を出力する。
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
+        timeLineIconUpdate()
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)as! TweetTableViewCell
         // stringListDataの中身を表示する（detailLabelを指定することで、TweetTableViewで定めたフォーマットと紐付く。）
@@ -80,5 +73,18 @@ extension TimelineViewController: UITableViewDataSource, UITableViewDelegate, Tw
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         // セルの高さを自動調整する。
         return UITableView.automaticDimension
+    }
+    
+    func timeLineIconUpdate() {
+        do {
+            let realm = try Realm()
+            let result = realm.objects(tweetDataModel.self)
+            stringListData2 = Array(result) // ← 取得したもの（result）を配列に格納
+            // self.tableView.reloadData()
+            print("データが渡ったよ")
+        } catch {
+            print("データの取得エラー: \(error)")
+        }
+        
     }
 }

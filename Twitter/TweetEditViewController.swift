@@ -16,9 +16,8 @@ protocol TweetEditViewControllerDelegate: AnyObject {
 /// ツイート編集画面
 class TweetEditViewController: UIViewController {
     
-    /// デリゲートのプロパティ
+    /// delegateのプロパティ
     weak var delegate: TweetEditViewControllerDelegate?
-    
     
     // Properties
     private let placeholderText = "いまどうしてる？"
@@ -47,6 +46,7 @@ class TweetEditViewController: UIViewController {
         
         keepData()
         
+        // 戻る際にdelegateを発動し、元画面のimageを更新する。
         delegate?.timeLineIconUpdate()
         dismiss(animated: true,completion: nil)
     }
