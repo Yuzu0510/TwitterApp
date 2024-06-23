@@ -8,8 +8,6 @@
 import UIKit
 import RealmSwift
 
-var stringListData2: [tweetDataModel] = []
-
 /// タイムライン画面
 class TimelineViewController: UIViewController {
     
@@ -79,7 +77,7 @@ extension TimelineViewController: UITableViewDataSource, UITableViewDelegate, Tw
         do {
             let realm = try Realm()
             let result = realm.objects(tweetDataModel.self)
-            stringListData2 = Array(result) // ← 取得したもの（result）を配列に格納
+            //stringListData2 = Array(result) // ← 取得したもの（result）を配列に格納
             // self.tableView.reloadData()
             print("データが渡ったよ")
         } catch {
