@@ -53,7 +53,7 @@ extension TimelineViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return stringListData.count
     }
-        
+    
     /// リストの中身を出力する。
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
@@ -81,12 +81,11 @@ extension TimelineViewController: UITableViewDelegate, TweetEditViewControllerDe
         do {
             let realm = try Realm()
             let result = realm.objects(tweetDataModel.self)
-            //stringListData2 = Array(result) // ← 取得したもの（result）を配列に格納
+            // stringListData2 = Array(result) // ← 取得したもの（result）を配列に格納
             // self.tableView.reloadData()
             print("データが渡ったよ")
         } catch {
             print("データの取得エラー: \(error)")
         }
-        
     }
 }

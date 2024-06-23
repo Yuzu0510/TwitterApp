@@ -17,5 +17,4 @@ class tweetDataModel: Object {
     @Persisted var userName: String = ""
     // ユーザーアイコン
     @Persisted var image: Data
-    
 }
