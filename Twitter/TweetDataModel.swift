@@ -5,7 +5,6 @@
 //  Created by 和田康一 on 2024/05/04.
 //
 
-import UIKit
 import RealmSwift
 
 // データモデル
