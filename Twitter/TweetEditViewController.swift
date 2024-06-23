@@ -44,7 +44,7 @@ class TweetEditViewController: UIViewController {
     ///　ポストボタン タップイベント
     @IBAction func didTapPostButton(_ sender: Any) {
         
-        keepData()
+        saveData()
         
         // 戻る際にdelegateを発動し、元画面のimageを更新する。
         delegate?.timeLineIconUpdate()
@@ -77,7 +77,7 @@ class TweetEditViewController: UIViewController {
     }
     
     /// Realmを使った保存処理を行っている
-    private func keepData() {
+    private func saveData() {
         // Realmを使って保持する
         try! realm.write {
             
