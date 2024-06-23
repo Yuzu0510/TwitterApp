@@ -46,16 +46,14 @@ class TimelineViewController: UIViewController {
     }
 }
 
-// MARK: - UITableViewDataSource, UITableViewDelegate
+// MARK: - UITableViewDataSource
 
-extension TimelineViewController: UITableViewDataSource, UITableViewDelegate, TweetEditViewControllerDelegate {
+extension TimelineViewController: UITableViewDataSource {
     /// リストの数を指定する。　passlistの配列の個数＝tableViewのリストの個数
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return stringListData.count
     }
-    
-
-    
+        
     /// リストの中身を出力する。
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
@@ -72,7 +70,13 @@ extension TimelineViewController: UITableViewDataSource, UITableViewDelegate, Tw
         // セルの高さを自動調整する。
         return UITableView.automaticDimension
     }
+}
+
+// MARK: - UITableViewDelegate
+
+extension TimelineViewController: UITableViewDelegate, TweetEditViewControllerDelegate {
     
+    /// タイムライン画面上のユーザーアイコンを変更する。
     func timeLineIconUpdate() {
         do {
             let realm = try Realm()
