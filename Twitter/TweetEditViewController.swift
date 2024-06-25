@@ -47,8 +47,8 @@ class TweetEditViewController: UIViewController {
         saveData()
         
         // 戻る際にdelegateを発動し、元画面のimageを更新する。
-        delegate?.timeLineIconUpdate()
-        dismiss(animated: true,completion: nil)
+        // delegate?.timeLineIconUpdate()
+        // dismiss(animated: true,completion: nil)
     }
     
     /// キャンセルボタン タップイベント
@@ -78,18 +78,24 @@ class TweetEditViewController: UIViewController {
     
     /// Realmを使った保存処理を行っている
     private func saveData() {
-        // Realmを使って保持する
-        try! realm.write {
-            
-            // お気に入り動画を追加(Realm)
-            // 選択された動画の情報をそれぞれの項目に代入する
-            dataModel.tweetData = postContentTextView.text
-            dataModel.userName = nameTextField.text!
-            // RealmではUIImage型が扱えないので、pngData型に変更
-            dataModel.image = userIconImageView.image!.pngData()!
-            realm.add(dataModel)
-            // Realmデータベースファイルまでのパスを表示
-            print(Realm.Configuration.defaultConfiguration.fileURL!)
+        do {
+            let realm = try Realm()
+            // Realmを使って保持する
+            try realm.write {
+                // お気に入り動画を追加(Realm)
+                // 選択された動画の情報をそれぞれの項目に代入する
+                dataModel.tweetData = postContentTextView.text
+                dataModel.userName = nameTextField.text!
+                // RealmではUIImage型が扱えないので、pngData型に変更
+                dataModel.image = userIconImageView.image!.pngData()!
+                realm.add(dataModel)
+                // Realmデータベースファイルまでのパスを表示
+                print(Realm.Configuration.defaultConfiguration.fileURL!)
+            }
+            dismiss(animated: true,completion: nil)
+        }
+        catch {
+            print("データを保存することができませんでした。 \(error)")
         }
     }
 }
