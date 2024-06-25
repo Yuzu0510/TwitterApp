@@ -92,6 +92,7 @@ class TweetEditViewController: UIViewController {
                 // Realmデータベースファイルまでのパスを表示
                 print(Realm.Configuration.defaultConfiguration.fileURL!)
             }
+            delegate?.timeLineIconUpdate()
             dismiss(animated: true,completion: nil)
         }
         catch {
