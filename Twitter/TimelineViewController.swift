@@ -87,7 +87,7 @@ extension TimelineViewController: UITableViewDelegate, TweetEditViewControllerDe
             let result = realm.objects(tweetDataModel.self)
             stringListData = Array(result) // ← 取得したもの（result）を配列に格納
             tweetTableView.reloadData()
-            print("データ取得")
+            print("データを取得しました。")
         } catch {
             // 取得失敗時の処理
             print("データの取得エラー: \(error)")
