@@ -22,7 +22,6 @@ class TweetEditViewController: UIViewController {
     // Properties
     private let placeholderText = "いまどうしてる？"
     var dataModel = tweetDataModel()
-    //let realm = try! Realm()
     
     // MARK: - IBOutlets
     
