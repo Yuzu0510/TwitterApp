@@ -57,7 +57,7 @@ extension TimelineViewController: UITableViewDataSource {
     /// リストの中身を出力する。
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        timeLineIconUpdate()
+        timeLineUpdate()
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)as! TweetTableViewCell
         // stringListDataの中身を表示する（detailLabelを指定することで、TweetTableViewで定めたフォーマットと紐付く。）
@@ -77,7 +77,7 @@ extension TimelineViewController: UITableViewDataSource {
 extension TimelineViewController: UITableViewDelegate, TweetEditViewControllerDelegate {
     
     /// タイムライン画面上のユーザーアイコンを変更する。
-    func timeLineIconUpdate() {
+    func timeLineUpdate() {
         do {
             let realm = try Realm()
             let result = realm.objects(tweetDataModel.self)

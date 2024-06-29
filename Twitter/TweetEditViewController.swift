@@ -10,7 +10,7 @@ import RealmSwift
 
 /// delegateのプロトコル
 protocol TweetEditViewControllerDelegate: AnyObject {
-    func timeLineIconUpdate()
+    func timeLineUpdate()
 }
 
 /// ツイート編集画面
@@ -22,7 +22,7 @@ class TweetEditViewController: UIViewController {
     // Properties
     private let placeholderText = "いまどうしてる？"
     var dataModel = tweetDataModel()
-    let realm = try! Realm()
+    //let realm = try! Realm()
     
     // MARK: - IBOutlets
     
@@ -89,10 +89,9 @@ class TweetEditViewController: UIViewController {
                 // RealmではUIImage型が扱えないので、pngData型に変更
                 dataModel.image = userIconImageView.image!.pngData()!
                 realm.add(dataModel)
-                // Realmデータベースファイルまでのパスを表示
-                print(Realm.Configuration.defaultConfiguration.fileURL!)
             }
-            delegate?.timeLineIconUpdate()
+            print("保存成功")
+            delegate?.timeLineUpdate()
             dismiss(animated: true,completion: nil)
         }
         catch {
