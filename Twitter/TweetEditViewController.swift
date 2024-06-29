@@ -16,12 +16,10 @@ protocol TweetEditViewControllerDelegate: AnyObject {
 /// ツイート編集画面
 class TweetEditViewController: UIViewController {
     
-    /// delegateのプロパティ
-    weak var delegate: TweetEditViewControllerDelegate?
-    
-    // Properties
+    // MARK: - Properties
     private let placeholderText = "いまどうしてる？"
     var dataModel = tweetDataModel()
+    weak var delegate: TweetEditViewControllerDelegate?
     
     // MARK: - IBOutlets
     
