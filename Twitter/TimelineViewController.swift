@@ -92,11 +92,11 @@ extension TimelineViewController: UITableViewDelegate, TweetEditViewControllerDe
     }
     
     /// アラートを表示
-        private func showAlert() {
-            let alert = UIAlertController(title: "エラーが発生しました",
-                                          message: "",
-                                          preferredStyle: .alert)
-            alert.addAction(UIAlertAction(title: "OK", style: .default))
-            self.present(alert, animated: true, completion: nil)
-        }
+    private func showAlert() {
+        let alert = UIAlertController(title: "エラーが発生しました",
+                                      message: "",
+                                      preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "OK", style: .default))
+        self.present(alert, animated: true, completion: nil)
+    }
 }
