@@ -43,9 +43,6 @@ class TweetEditViewController: UIViewController {
         
         saveData()
         
-        // 戻る際にdelegateを発動し、元画面のimageを更新する。
-        // delegate?.timeLineIconUpdate()
-        // dismiss(animated: true,completion: nil)
     }
     
     /// キャンセルボタン タップイベント
