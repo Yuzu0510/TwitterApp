@@ -115,6 +115,8 @@ extension TweetEditViewController: UITextViewDelegate {
     }
 }
 
+// MARK: - IconEditViewControllerDelegate
+
 extension TweetEditViewController: IconEditViewControllerDelegate {
     func update(userIconImageView: UIImage) {
         // IconEditViewControllerから受け取った画像を、TweetEditViewControllerへ渡す。
