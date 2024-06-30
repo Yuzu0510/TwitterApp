@@ -56,8 +56,6 @@ extension TimelineViewController: UITableViewDataSource {
     /// リストの中身を出力する。
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        timeLineUpdate()
-        
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)as! TweetTableViewCell
         // stringListDataの中身を表示する（detailLabelを指定することで、TweetTableViewで定めたフォーマットと紐付く。）
         cell.userIconImageView?.image = tweetData[indexPath.row]
