@@ -17,6 +17,7 @@ protocol TweetEditViewControllerDelegate: AnyObject {
 class TweetEditViewController: UIViewController {
     
     // MARK: - Properties
+    
     private let placeholderText = "いまどうしてる？"
     var dataModel = tweetDataModel()
     weak var delegate: TweetEditViewControllerDelegate?
